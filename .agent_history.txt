@@ -1,0 +1,88 @@
+User> delete
+Agent> Please specify the ID of the reminder you want to delete. Usage: 'delete reminder <id_prefix>'
+User> delete reminder
+Agent> Please specify the ID of the reminder you want to delete. Usage: 'delete reminder <id_prefix>'
+User> exit
+User> hello
+Agent> Hello! I'm your Reminder Agent. How can I help you organize your day?
+User> how are you
+Agent> I'm functioning perfectly and ready to help you set reminders!
+User> delete
+Agent> Please provide the ID of the reminder you want to delete:
+User> exit
+Agent> No reminder found with ID starting with 'exit'.
+User> exit
+User> i have a match at 7pm
+Agent> Reminder set! ID: 83f55f64..., Message: 'match', Due: 2025-12-16 19:00:00+00:00
+User> i have a dinner today 6am
+Agent> Appointment reminder set! ID: ea2060eb..., Message: 'APPOINTMENT: dinner  6am', Due: 2025-12-16 19:00:00+00:00
+User> help
+Agent> 
+Available Commands:
+  - 'remind me to <message> <time_expression>' (e.g., 'remind me to buy milk tomorrow at 8 AM')
+  - 'set <type> reminder <message> <time_expression>' (e.g., 'set birthday reminder for John on Jan 15 at 9 AM')
+  - 'list all reminders', 'list', or 'l'
+  - 'list (task|birthday|appointment) reminders'
+  - 'delete reminder <id_prefix>'
+  - 'show history' or 'h'
+  - 'help': Display this help message
+  - 'exit': Quit the agent
+
+User> list
+Agent> 
+--- Your Reminders ---
+ID: 83f55f64..., Message: 'match', Due: 2025-12-16 19:00:00+00:00, Type: one-time
+ID: ea2060eb..., Message: 'APPOINTMENT: dinner  6am', Due: 2025-12-16 19:00:00+00:00, Type: one-time
+----------------------
+User> h
+Agent> 
+--- Command History ---
+1. User> delete
+2. Agent> Please specify the ID of the reminder you want to delete. Usage: 'delete reminder <id_prefix>'
+3. User> delete reminder
+4. Agent> Please specify the ID of the reminder you want to delete. Usage: 'delete reminder <id_prefix>'
+5. User> exit
+6. User> hello
+7. Agent> Hello! I'm your Reminder Agent. How can I help you organize your day?
+8. User> how are you
+9. Agent> I'm functioning perfectly and ready to help you set reminders!
+10. User> delete
+11. Agent> Please provide the ID of the reminder you want to delete:
+12. User> exit
+13. Agent> No reminder found with ID starting with 'exit'.
+14. User> exit
+15. User> i have a match at 7pm
+16. Agent> Reminder set! ID: 83f55f64..., Message: 'match', Due: 2025-12-16 19:00:00+00:00
+17. User> i have a dinner today 6am
+18. Agent> Appointment reminder set! ID: ea2060eb..., Message: 'APPOINTMENT: dinner  6am', Due: 2025-12-16 19:00:00+00:00
+19. User> help
+20. Agent> 
+Available Commands:
+  - 'remind me to <message> <time_expression>' (e.g., 'remind me to buy milk tomorrow at 8 AM')
+  - 'set <type> reminder <message> <time_expression>' (e.g., 'set birthday reminder for John on Jan 15 at 9 AM')
+  - 'list all reminders', 'list', or 'l'
+  - 'list (task|birthday|appointment) reminders'
+  - 'delete reminder <id_prefix>'
+  - 'show history' or 'h'
+  - 'help': Display this help message
+  - 'exit': Quit the agent
+
+21. User> list
+22. Agent> 
+--- Your Reminders ---
+ID: 83f55f64..., Message: 'match', Due: 2025-12-16 19:00:00+00:00, Type: one-time
+ID: ea2060eb..., Message: 'APPOINTMENT: dinner  6am', Due: 2025-12-16 19:00:00+00:00, Type: one-time
+----------------------
+23. User> h
+-----------------------
+User> delete
+Agent> Please provide the ID of the reminder you want to delete:
+User> 83f55f64
+Agent> Reminder with ID '83f55f64...' deleted.
+User> hello
+Agent> Hello! I'm your Reminder Agent. How can I help you organize your day?
+User> can you set reminder of lunch tommorow at 11am
+Agent> Reminder set! ID: 125bf7b3..., Message: 'can you set reminder of lunch tommorow', Due: 2025-12-16 19:00:00+00:00
+User> by
+Agent> Could not find a clear time in your command. Please specify 'on', 'at', 'in', or 'by' with a time expression.
+User> exit
