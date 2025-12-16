@@ -1,0 +1,75 @@
+[project]
+name = "reminder-agent"
+version = "0.1.0"
+description = "A basic reminder agent Python library for managing one-time and recurring reminders."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+authors = [{name = "Your Name", email = "your.email@example.com"}] # Placeholder
+license = {text = "MIT"} # Placeholder
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "black",
+    "pytest", # pytest is a dev dependency
+]
+
+[tool.uv]
+# Configuration for uv, e.g., for specific resolver settings or lock file behavior
+# Currently empty, can be extended later.
+
+[tool.ruff]
+line-length = 100
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+    "ANN",# flake8-annotations
+    "ASYNC", # flake8-async
+    "N",  # pep8-naming
+    "D",  # pydocstyle (optional, can be too strict)
+]
+ignore = ["D100", "D104", "ANN101", "ANN002", "ANN003"] # Ignore missing docstrings in modules/classes and some annotation rules
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "venv",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
